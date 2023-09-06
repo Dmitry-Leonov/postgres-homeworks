@@ -4,7 +4,6 @@ import psycopg2
 
 
 def get_filling_table(name_file_csv, name_table):
-    # connect to db
     conn = psycopg2.connect(host='localhost', database='north', user='postgres', password='040872')
     with open(name_file_csv, 'r') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
